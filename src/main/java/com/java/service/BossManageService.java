@@ -26,9 +26,9 @@ public class BossManageService {
 		return bossmanagedao.addproduct(productinfo);
 	}
 	
-	public String updateproduct(ProductInfo productinfo,String pro_id)
+	public String updateproduct(ProductInfo productinfo)
 	{
-		return bossmanagedao.updateproduct(productinfo,pro_id);
+		return bossmanagedao.updateproduct(productinfo);
 	}
 	
 	public String deleteproduct(String pro_id)

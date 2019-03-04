@@ -23,7 +23,7 @@ public class BossManageController {
 	HttpServletRequest request;
 	
 	@RequestMapping(value = "/AddShop")
-	public @ResponseBody  String valid(@RequestParam(value = "shop_name") String shopname) {
+	public @ResponseBody  String valid(@RequestParam(value = "shopname") String shopname) {
 		String username=request.getSession().getAttribute("username").toString();
 		String result=bossmanageservice.addshop(shopname,username);
         return String.valueOf(result);
@@ -39,7 +39,7 @@ public class BossManageController {
     }
 	
 	@RequestMapping(value = "/AddProduct")
-	public @ResponseBody  String valid(@RequestParam(value = "shop_name") ProductInfo productinfo) {
+	public @ResponseBody  String valid(ProductInfo productinfo) {
 
 		String result=bossmanageservice.addproduct(productinfo);
 		return String.valueOf(result);
@@ -47,9 +47,9 @@ public class BossManageController {
     }
 	
 	@RequestMapping(value = "/UpdateProduct")
-	public @ResponseBody  String valid(@RequestParam(value = "shop_name") ProductInfo productinfo,String pro_id) {
+	public @ResponseBody  String v(ProductInfo productinfo) {
 
-		String result=bossmanageservice.updateproduct(productinfo,pro_id);
+		String result=bossmanageservice.updateproduct(productinfo);
 		return String.valueOf(result);
         
     }

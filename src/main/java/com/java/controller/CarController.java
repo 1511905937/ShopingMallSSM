@@ -7,8 +7,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.java.service.CarService;
 
-import java.util.List;
-
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 

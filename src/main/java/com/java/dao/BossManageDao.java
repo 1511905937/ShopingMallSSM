@@ -40,7 +40,7 @@ public class BossManageDao {
 		return productmapper.insert(productinfo);
 	}
 	
-	public String updateproduct(ProductInfo productinfo,String pro_id)
+	public String updateproduct(ProductInfo productinfo)
 	{
 		return productmapper.update(productinfo);
 	}
